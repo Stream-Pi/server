@@ -25,7 +25,7 @@ jobs:
         run: |
           rm -rf src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
@@ -41,18 +41,18 @@ jobs:
           axel -n 8 https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -135,7 +135,7 @@ jobs:
         run: |
           rm -rf src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
@@ -151,18 +151,18 @@ jobs:
           axel -n 8 https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-i686.AppImage
           chmod +x appimagetool-i686.AppImage
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -243,7 +243,7 @@ jobs:
         run: |
           rm -rf src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
@@ -253,18 +253,18 @@ jobs:
           wget -P /tmp https://download2.gluonhq.com/openjfx/18/openjfx-18-ea+7_osx-x64_bin-jmods.zip
           unzip /tmp/openjfx-18-ea+7_osx-x64_bin-jmods.zip -d /tmp
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -310,18 +310,18 @@ jobs:
         run: |
           del src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
           path: src/main/resources/com/stream_pi/server
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -330,7 +330,7 @@ jobs:
           curl.exe -o D:\openjfx-18-ea+7_windows-x64_bin-jmods.zip https://download2.gluonhq.com/openjfx/18/openjfx-18-ea+7_windows-x64_bin-jmods.zip
           Expand-Archive -Force D:\openjfx-18-ea+7_windows-x64_bin-jmods.zip D:\
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
@@ -366,18 +366,18 @@ jobs:
         run: |
           del src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
           path: src/main/resources/com/stream_pi/server
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -386,7 +386,7 @@ jobs:
           curl.exe -o D:\openjfx-18-ea+7_windows-x86_bin-jmods.zip https://download2.gluonhq.com/openjfx/18/openjfx-18-ea+7_windows-x86_bin-jmods.zip
           Expand-Archive -Force D:\openjfx-18-ea+7_windows-x86_bin-jmods.zip D:\
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
@@ -419,13 +419,13 @@ jobs:
         run: |
           rm -rf src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
           path: src/main/resources/com/stream_pi/server
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -433,7 +433,7 @@ jobs:
         run: |
           echo "VERSION=$(<version.txt)" >> $GITHUB_ENV
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
@@ -502,13 +502,13 @@ jobs:
         run: |
           rm -rf src/main/resources/com/stream_pi/server/Default.zip
       - name: Downloading Default.zip ...
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: default-zip
           path: src/main/resources/com/stream_pi/server
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -516,7 +516,7 @@ jobs:
         run: |
           echo "VERSION=$(<version.txt)" >> $GITHUB_ENV
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars

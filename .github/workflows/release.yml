@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "VERSION=$(<version.txt)" >> $GITHUB_ENV
       - name: Download BUILD_NUMBER
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
             workflow: init.yml
             name: build_number
@@ -27,67 +27,67 @@ jobs:
         run: |
           echo "BUILD_NUMBER=$(<build_number.txt)" >> $GITHUB_ENV
       - name: Download Windows x64 msi
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: windows-msi-x64
           path: target/install
       - name: Download Windows x86 msi
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: windows-msi-x86
           path: target/install
       - name: Download Linux x64 deb
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-deb-x64
           path: target/install
       - name: Download Linux x64 rpm
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-rpm-x64
           path: target/install
       - name: Download Linux x64 AppImage
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-app-image-x64
           path: target/install
       - name: Download Linux x86 deb
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-deb-x86
           path: target/install
       - name: Download Linux x86 rpm
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-rpm-x86
           path: target/install
       - name: Download Linux x86 AppImage
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-app-image-x86
           path: target/install
       - name: Download Linux aarch64 zip
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-zip-aarch64
           path: target/install
       - name: Download Linux arm32 ZIP
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: linux-zip-arm32
           path: target/install
       - name: Download MacOS x64 pkg
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           name: macos-pkg-x64
